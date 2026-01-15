@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Web</title>
+</head>
+<body>
+    <h1>🎲 Random danh sách</h1>
+    <form method="post">
+        <button type="submit">Random</button>
+    </form>
+
+    {% if result %}
+        <h2>Kết quả: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
