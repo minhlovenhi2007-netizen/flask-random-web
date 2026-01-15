@@ -5,12 +5,18 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    result = None
-    if request.method == "POST":
-        names = ["bánh mỳ", "xôi", "mỳ cay", "mỳ trộn", "cơm thố", "bún riêu", "gà rán", "kimbap", "bún chả", "cơm gà viên", "mỳ ý", ]
-        result = random.choice(names)
+    mon_an = None
 
-    return render_template("index.html", result=result)
+    if request.method == "POST":
+        danh_sach_mon = [
+            "bánh mì", "xôi", "mỳ cay", "mỳ trộn",
+            "cơm thố", "bún riêu", "gà rán",
+            "kimbap", "bún chả", "cơm gà"
+        ]
+        mon_an = random.choice(danh_sach_mon)
+
+    return render_template("index.html", mon_an=mon_an)
+
 @app.route("/random")
 def random_page():
     return "Hello random"
