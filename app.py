@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     result = None
     if request.method == "POST":
-        names = ["An", "Bình", "Cường", "Dũng", "Hà"]
+        names = ["bánh mỳ", "xôi", "mỳ cay", "mỳ trộn", "cơm thố", "bún riêu", "gà rán", "kimbap", "bún chả", "cơm gà viên", "mỳ ý", ]
         result = random.choice(names)
 
     return render_template("index.html", result=result)
