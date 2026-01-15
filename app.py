@@ -11,6 +11,9 @@ def index():
         result = random.choice(names)
 
     return render_template("index.html", result=result)
+@app.route("/random")
+def random_page():
+    return "Hello random"
 
 if __name__ == "__main__":
     app.run()
