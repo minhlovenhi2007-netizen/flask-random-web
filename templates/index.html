@@ -60,6 +60,17 @@
 
         <form method="post">
             <button type="submit">Random ngay</button>
+        </form>
+
+        {% if mon_an %}
+            <p class="result">
+                🍽️ Hôm nay ăn: <strong>{{ mon_an }}</strong>
+            </p>
+        {% endif %}
+    </div>
+</body>
+
+
 
 
 
